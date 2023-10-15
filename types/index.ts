@@ -18,3 +18,14 @@ export type ProfileType = {
   socialLinks: string[];
   skills: string[];
 };
+
+export type ProjectType = {
+  _id: string;
+  slug: string;
+  title: string;
+  description: string;
+  live: string;
+  github: string;
+  status: string;
+  content?: string;
+};

@@ -1,3 +1,5 @@
+import { LinksSection } from "@/components/linksSection";
+import { ProjectsSection } from "@/components/projectsSection";
 import { InternalLink } from "@/components/ui/InternalLink";
 import Icon from "@/components/ui/icon";
 import ArrowRightIcon from "@/public/assets/icons/arrow-right.svg";
@@ -7,6 +9,8 @@ import type { ProfileType } from "@/types";
 
 export default async function Home() {
   const profile: ProfileType[] = await getProfile();
+
+  const projects = null;
 
   return (
     <>
@@ -28,6 +32,10 @@ export default async function Home() {
           <Icon svg={ArrowRightIcon} />
         </InternalLink>
       </section>
+      <div className="w-full flex justify-center gap-[20rem] items-center max-md:flex-col max-lg:gap-8 max-lg:justify-between px-[6rem] max-md:px-0">
+        <ProjectsSection projects={projects} />
+        <LinksSection links={profile[0].socialLinks} />
+      </div>
     </>
   );
 }
