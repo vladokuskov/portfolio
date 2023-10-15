@@ -16,8 +16,13 @@ const config: Config = {
       backgroundColor: {
         app: "#131313",
       },
+      colors: {
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        accent: "hsl(var(--accent))",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

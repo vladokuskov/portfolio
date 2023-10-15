@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="fixed top-0 backdrop-blur-sm z-50 w-full h-12 flex flex-col items-center justify-center p-1">
       <Link
         href="/"
-        className="flex items-center hover:text-neutral-800 focus:text-neutral-800 dark:hocus:text-white dark:focus:text-whit dark:text-white text-neutral-800"
+        className="flex items-center text-foreground hover:text-foreground/90 focus:text-foreground/90"
         aria-label="Back to home"
         tabIndex={0}
       >

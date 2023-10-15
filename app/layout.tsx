@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site";
-import "@/styles/global.css";
+import "../styles/global.css";
 import { Inter, Ramaraja, Roboto, Ruda } from "next/font/google";
 
 const ruda = Ruda({
@@ -60,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ruda.variable} ${ramaraja.variable} ${roboto.variable} ${inter.variable}`}
+        className={`${ruda.variable} ${ramaraja.variable} ${roboto.variable} ${inter.variable} bg-background`}
         suppressHydrationWarning={true}
       >
         {children}

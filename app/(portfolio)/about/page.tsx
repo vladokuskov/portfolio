@@ -9,8 +9,6 @@ import imageUrlBuilder from "@sanity/image-url";
 import client from "@/sanity/sanity.client";
 import { PortableText } from "@portabletext/react";
 
-export const revalidate = 3600;
-
 export default async function About() {
   const profile: ProfileType[] = await getProfile();
 
@@ -45,10 +43,10 @@ export default async function About() {
             label={profile[0].profileImage.alt}
           />
         </div>
-        <div className="font-ruda my-2">
+        <div className="font-ruda my-2 text-foreground">
           <PortableText value={profile[0].fullBio} />
         </div>
-        <p className="text-neutral-800 dark:text-neutral-500 font-ruda tracking-wide my-8  mr-auto ">
+        <p className="text-foreground/80 font-ruda tracking-wide my-8  mr-auto ">
           Shhh.. some of my photos right there :)
         </p>
         <div className="w-full flex flex-wrap flex-auto items-start justify-center gap-8">

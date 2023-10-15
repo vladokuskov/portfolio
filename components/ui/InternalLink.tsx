@@ -25,8 +25,7 @@ const InternalLink = ({
   return variant === "page" && href ? (
     <Link
       className={clsx(
-        "text-neutral-800 hover:text-neutral-600 focus:text-neutral-600 focus:bg-neutral-100 font-semibold p-1 rounded-md",
-        "dark:text-neutral-400 dark:hover:text-neutral-50 dark:focus:text-neutral-50 dark:focus:bg-neutral-800",
+        "text-foreground hover:text-foreground/90 focus:text-foreground/90 font-semibold p-1 rounded-md",
         className
       )}
       href={href}
@@ -36,8 +35,7 @@ const InternalLink = ({
   ) : (
     <a
       className={clsx(
-        "text-neutral-900 hover:text-neutral-600 focus:text-neutral-600 focus:bg-neutral-100",
-        "dark:text-neutral-300 dark:hover:text-neutral-100 dark:focus:text-neutral-100 dark:focus:bg-neutral-800 ",
+        "text-foreground hover:text-foreground/90  focus:text-foreground/90",
         variant === "external" && "p-1 rounded-md cursor-pointer",
         className
       )}

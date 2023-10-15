@@ -21,11 +21,11 @@ export type ProfileType = {
 
 export type ProjectType = {
   _id: string;
-  slug: string;
+  slug: { current: string };
   title: string;
   description: string;
   live: string;
   github: string;
   status: string;
-  content?: string;
+  content: PortableTextBlock[];
 };

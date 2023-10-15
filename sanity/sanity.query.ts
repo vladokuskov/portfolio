@@ -17,3 +17,30 @@ export async function getProfile() {
     }`
   );
 }
+
+export async function getProjectsList() {
+  return client.fetch(
+    groq`*[_type == "project"]{
+      _id,
+      slug,
+      title,
+      description,
+    }`
+  );
+}
+
+export async function getProject(slug: string) {
+  return client.fetch(
+    groq`*[_type == "project" && slug.current == $slug][0]{
+      _id,
+      slug,
+      title,
+      description,
+      live,
+      github,
+      status,
+      content,
+    }`,
+    { slug }
+  );
+}

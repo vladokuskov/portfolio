@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-2">
       <h1 className="text-foreground font-ruda text-3xl w-full text-center mt-44">
-        404 - Page Not Found
+        404 - Project not found
       </h1>
       <Link
         href="/"
