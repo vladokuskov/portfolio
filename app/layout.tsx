@@ -38,6 +38,7 @@ export const metadata = {
     "Next.js",
     "React.js",
     "JavaScript",
+    "TypeScript",
     "Web developer",
   ],
   themeColor: [
