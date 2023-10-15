@@ -27,7 +27,10 @@ const ramaraja = Ramaraja({
 });
 
 export const metadata = {
-  title: siteConfig.name,
+  title: {
+    template: `%s | ${siteConfig.name}`,
+    default: `${siteConfig.name} - Web developer`,
+  },
   description: siteConfig.description,
   keywords: [
     "Vladyslav",

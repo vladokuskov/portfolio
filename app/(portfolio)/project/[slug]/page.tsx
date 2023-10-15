@@ -6,6 +6,25 @@ import { ProjectType } from "@/types";
 import { PortableText } from "@portabletext/react";
 import clsx from "clsx";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+type Props = {
+  params: { slug: string };
+};
+
+export const generateMetadata = async (
+  props: Props
+): Promise<Metadata | undefined> => {
+  const { params } = props;
+  const project: ProjectType = await getProject(params.slug);
+
+  if (project) {
+    return {
+      title: project.title,
+      description: project.description,
+    };
+  }
+};
 
 export default async function ProjectPage({
   params,

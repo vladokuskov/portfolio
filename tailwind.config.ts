@@ -20,6 +20,7 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         accent: "hsl(var(--accent))",
+        ring: "hsl(var(--ring))",
       },
     },
   },

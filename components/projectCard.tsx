@@ -19,6 +19,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
         title="More about project"
         aria-label="More about project"
         className={clsx(
+          "transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
           "text-foreground hover:text-foreground/90 focus:text-foreground/90 focus:scale-90 rounded-md"
         )}
       >

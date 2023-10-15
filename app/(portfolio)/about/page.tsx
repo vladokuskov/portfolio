@@ -9,6 +9,8 @@ import imageUrlBuilder from "@sanity/image-url";
 import client from "@/sanity/sanity.client";
 import { PortableText } from "@portabletext/react";
 
+export const metadata = { title: `About me` };
+
 export default async function About() {
   const profile: ProfileType[] = await getProfile();
 
