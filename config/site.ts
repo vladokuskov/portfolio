@@ -6,6 +6,6 @@ type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   name: "Vladyslav Okuskov",
-  description: "Web developer that works with React.js, Next.js, Vue.js, Node.js",
+  description: "Web developer who works with React.js, Next.js, Vue.js, Node.js",
   url: "https://vladokuskov.xyz/",
 };
