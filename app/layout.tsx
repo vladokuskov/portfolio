@@ -2,7 +2,7 @@ import { siteConfig } from "@/config/site";
 import { cookies } from "next/headers";
 import clsx from "clsx";
 import "../styles/global.css";
-import { Inter, Ramaraja, Roboto, Ruda } from "next/font/google";
+import { Inter, Ramaraja, Roboto, Ruda, Poppins } from "next/font/google";
 
 const ruda = Ruda({
   weight: ["400", "500", "600", "700"],
@@ -14,6 +14,12 @@ const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-roboto",
+});
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
 });
 
 const inter = Inter({
@@ -68,7 +74,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={clsx(
-          `${ruda.variable} ${ramaraja.variable} ${roboto.variable} ${inter.variable} bg-background`,
+          `${ruda.variable} ${ramaraja.variable} ${poppins.variable} ${roboto.variable} ${inter.variable} bg-background`,
           prefersDark ? "dark" : undefined
         )}
         suppressHydrationWarning={true}

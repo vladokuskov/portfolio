@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         ruda: ["var(--font-ruda)"],
         ramaraja: ["var(--font-ramaraja)"],
+        poppins: ["var(--font-poppins)"],
       },
       backgroundColor: {
         app: "#131313",
