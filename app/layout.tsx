@@ -1,4 +1,6 @@
 import { siteConfig } from "@/config/site";
+import { cookies } from "next/headers";
+import clsx from "clsx";
 import "../styles/global.css";
 import { Inter, Ramaraja, Roboto, Ruda } from "next/font/google";
 
@@ -61,10 +63,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const prefersDark = cookies().get("x-theme")?.value === "dark";
   return (
     <html lang="en">
       <body
-        className={`${ruda.variable} ${ramaraja.variable} ${roboto.variable} ${inter.variable} bg-background`}
+        className={clsx(
+          `${ruda.variable} ${ramaraja.variable} ${roboto.variable} ${inter.variable} bg-background`,
+          prefersDark ? "dark" : undefined
+        )}
         suppressHydrationWarning={true}
       >
         {children}
