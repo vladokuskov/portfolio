@@ -1,16 +1,23 @@
-import { LinksSection } from "@/components/linksSection";
-import { ProjectsSection } from "@/components/projectsSection";
-import { InternalLink } from "@/components/ui/InternalLink";
-import Icon from "@/components/ui/icon";
-import ArrowRightIcon from "@/public/assets/icons/arrow-right.svg";
-import HeroImage from "@/public/face_logo.svg";
-import { getProfile, getProjectsList } from "@/sanity/sanity.query";
-import type { ProfileType, ProjectType } from "@/types";
+import { LinksSection } from '@/components/layout/linksSection'
+import { ProjectsSection } from '@/components/layout/projectsSection'
+import { InternalLink } from '@/components/ui/InternalLink'
+import Icon from '@/components/ui/icon'
+import ArrowRightIcon from '@/public/assets/icons/arrow-right.svg'
+import HeroImage from '@/public/face_logo.svg'
+import {
+  getArticleList,
+  getProfile,
+  getProjectsList,
+} from '@/sanity/sanity.query'
+import type { ArticleType, ProfileType, ProjectType } from '@/types'
+import { ArticlesSection } from '@/components/layout/articlesSection'
 
 export default async function Home() {
-  const profile: ProfileType[] = await getProfile();
+  const profile: ProfileType[] = await getProfile()
 
-  const projects: ProjectType[] = await getProjectsList();
+  const projects: ProjectType[] = await getProjectsList()
+
+  const articles: ArticleType[] = await getArticleList()
 
   return (
     <>
@@ -32,10 +39,11 @@ export default async function Home() {
           <Icon svg={ArrowRightIcon} />
         </InternalLink>
       </section>
-      <div className="w-full flex justify-center gap-[20rem] items-center max-md:flex-col max-lg:gap-8 max-lg:justify-between px-[6rem] max-md:px-0">
+      <div className="w-full flex justify-between items-center max-md:flex-col max-md:px-0">
         <ProjectsSection projects={projects} />
         <LinksSection links={profile[0].socialLinks} />
       </div>
+      <ArticlesSection articles={articles} />
     </>
-  );
+  )
 }

@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { cookies } from "next/headers";
-import { ThemeSwitcher } from "./themeSwitcher";
+import { ThemeSwitcher } from "../ui/themeSwitcher";
 
 const Footer = () => {
   const theme = cookies().get("x-theme")?.value;

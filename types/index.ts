@@ -29,3 +29,15 @@ export type ProjectType = {
   status: string;
   content: PortableTextBlock[];
 };
+
+export type ArticleType = {
+  _id: string;
+  slug: { current: string };
+  title: string;
+  content: PortableTextBlock[];
+  author: string;
+  publishedDate: Date;
+  excerpt: string;
+  relatedArticles: string[];
+};
+

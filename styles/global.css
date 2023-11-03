@@ -1,3 +1,4 @@
+@import "colors.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,27 +9,15 @@
   }
 }
 
-@layer base {
-  :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 3%;
-
-    --accent: 51 100% 52%;
-
-    --ring: 56 87% 55%;
-  }
-
-  .dark {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
-
-    --accent: 51 100% 62%;
-  }
-}
-
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@layer base {
+  button, a {
+   @apply transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50
   }
 }
 

@@ -1,5 +1,5 @@
-import { ProjectType } from "@/types";
-import { ProjectCard } from "./projectCard";
+import { ProjectType } from '@/types'
+import { ProjectCard } from '../projectCard'
 
 const ProjectsSection = ({ projects }: { projects: ProjectType[] | null }) => {
   return (
@@ -16,11 +16,11 @@ const ProjectsSection = ({ projects }: { projects: ProjectType[] | null }) => {
         </div>
         {projects &&
           projects.map((project) => {
-            return <ProjectCard key={project._id} project={project} />;
+            return <ProjectCard key={project._id} project={project} />
           })}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { ProjectsSection };
+export { ProjectsSection }

@@ -1,7 +1,7 @@
 import LinkedInIcon from "@/public/assets/icons/linkedin.svg";
 import GithubIcon from "@/public/assets/icons/github.svg";
 import MailIcon from "@/public/assets/icons/mail.svg";
-import { InternalLink } from "./ui/InternalLink";
+import { InternalLink } from "../ui/InternalLink";
 
 const LinksSection = ({ links }: { links: string[] }) => {
   return (

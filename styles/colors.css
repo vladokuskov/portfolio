@@ -1,0 +1,21 @@
+@tailwind base;
+
+@layer base {
+    :root {
+        --background: 0 0% 98%;
+        --foreground: 0 0% 3%;
+
+        --accent: 51 100% 52%;
+
+        --ring: 0 0% 0%;
+    }
+
+    .dark {
+        --background: 0 0% 8%;
+        --foreground: 0 0% 95%;
+
+        --accent: 51 100% 62%;
+
+        --ring: 56 87% 55%;
+    }
+}

@@ -1,32 +1,32 @@
-import Icon from "./icon";
-import clsx from "clsx";
-import Link from "next/link";
+import Icon from './icon'
+import clsx from 'clsx'
+import Link from 'next/link'
 
 interface InternalLinkI extends React.HTMLProps<HTMLAnchorElement> {
-  variant: "external" | "page";
-  svg?: React.FC<React.SVGProps<SVGSVGElement>>;
-  children?: React.ReactNode;
-  href?: string;
-  className?: string;
-  width?: string;
-  height?: string;
+  variant: 'external' | 'page'
+  svg?: React.FC<React.SVGProps<SVGSVGElement>>
+  children?: React.ReactNode
+  href?: string
+  className?: string
+  width?: string
+  height?: string
 }
 
 const InternalLink = ({
-  variant = "external",
+  variant = 'external',
   svg,
   children,
   href,
   className,
-  width = "40",
-  height = "40",
+  width = '40',
+  height = '40',
   ...props
 }: InternalLinkI) => {
-  return variant === "page" && href ? (
+  return variant === 'page' && href ? (
     <Link
+      scroll={true}
       className={clsx(
-        "transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-        "text-foreground hover:text-foreground/90 focus:text-foreground/90 font-semibold p-1 rounded-md",
+        'text-foreground hover:text-foreground/90 focus:text-foreground/90 font-semibold p-1 rounded-md',
         className
       )}
       href={href}
@@ -36,26 +36,24 @@ const InternalLink = ({
   ) : (
     <a
       className={clsx(
-        "transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-        "text-foreground hover:text-foreground/90  focus:text-foreground/90",
-        variant === "external" && "p-1 rounded-md cursor-pointer",
+        'text-foreground hover:text-foreground/90 focus:text-foreground/90 flex items-center justify-center gap-2',
+        variant === 'external' && 'p-1 rounded-md cursor-pointer',
         className
       )}
       target="_blank"
       href={href}
       {...props}
     >
-      {variant === "external" && svg ? (
+      {svg && (
         <Icon
           svg={svg}
-          width={width ? width : "40"}
-          height={height ? height : "40"}
+          width={width ? width : '40'}
+          height={height ? height : '40'}
         />
-      ) : (
-        children
       )}
+      {children}
     </a>
-  );
-};
+  )
+}
 
-export { InternalLink };
+export { InternalLink }
