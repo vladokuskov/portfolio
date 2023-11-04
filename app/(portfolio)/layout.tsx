@@ -1,7 +1,7 @@
 import { Footer } from '@/components/layout/footer'
 import { Navbar } from '@/components/layout/navbar'
 
-export const revalidate = 3600;
+export const revalidate = 0
 
 export default function RootLayout({
   children,

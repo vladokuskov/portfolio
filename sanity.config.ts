@@ -1,18 +1,18 @@
-import { defineConfig } from "sanity";
-import { deskTool } from "sanity/desk";
-import { schemaTypes } from "./schemas";
+import { defineConfig } from 'sanity'
+import { deskTool } from 'sanity/desk'
+import { schemaTypes } from './schemas'
 
 export default defineConfig({
-  name: "default",
-  title: "Swappnet portfolio",
+  name: 'default',
+  title: 'Swappnet portfolio',
 
-  projectId: "1bvfxolc",
-  dataset: "production",
-  basePath: "/studio",
+  projectId: '1bvfxolc',
+  dataset: 'production',
+  basePath: '/studio',
 
   plugins: [deskTool()],
 
   schema: {
     types: schemaTypes,
   },
-});
+})

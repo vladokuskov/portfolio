@@ -18,7 +18,7 @@ const AboutImage = ({ src, alt, label }: AboutImage) => {
 
   return (
     <div
-      className="relative min-w-[15rem] ease-in rounded-md w-[15em] h-[15rem] min-h-[15rem] bg-neutral-800 cursor-help"
+      className="relative min-w-[15rem] ease-in rounded-md w-[15em] h-[15rem] min-h-[15rem] cursor-help"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >

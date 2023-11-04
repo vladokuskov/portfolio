@@ -13,7 +13,13 @@ export async function getProfile() {
       fullBio,
       email,
       socialLinks,
-      skills
+      skills,
+      currentPosition {
+        positionName,
+        company,
+        companyURL,
+        companyIcon {alt, "image": asset->url}
+      }
     }`
   )
 }
