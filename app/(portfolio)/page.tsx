@@ -47,8 +47,8 @@ export default async function Home() {
           </h2>
           <Image
             src={builder.image(currentPosition.companyIcon.image).url()}
-            width={40}
-            height={40}
+            width={15}
+            height={15}
             alt={currentPosition.companyIcon.alt}
           />
         </div>
