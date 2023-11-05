@@ -37,20 +37,23 @@ export default async function Home() {
           {profile[0].shortBio}
         </h1>
         <div className="w-full flex gap-2 items-center justify-center mt-4">
-          <h2 className="text-foreground/80">
-            Works as a{' '}
+          <h2 className="text-foreground/70">
             <span className="text-foreground">
               {currentPosition.positionName}
             </span>{' '}
             at{' '}
             <span className="text-foreground">{currentPosition.company}</span>
           </h2>
-          <Image
-            src={builder.image(currentPosition.companyIcon.image).url()}
-            width={40}
-            height={40}
-            alt={currentPosition.companyIcon.alt}
-          />
+          {currentPosition.companyIcon && (
+            <div className="p-1 bg-neutral-700 rounded-md">
+              <Image
+                src={builder.image(currentPosition.companyIcon.image).url()}
+                width={15}
+                height={15}
+                alt={currentPosition.companyIcon.alt}
+              />
+            </div>
+          )}
         </div>
 
         <InternalLink
