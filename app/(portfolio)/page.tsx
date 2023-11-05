@@ -55,7 +55,6 @@ export default async function Home() {
             </div>
           )}
         </div>
-
         <InternalLink
           href="/about"
           variant="page"

@@ -45,13 +45,7 @@ export type ArticleType = {
   slug: {
     current: string
   }
-  content: {
-    _type: 'block'
-    children: {
-      _type: 'span'
-      text: string
-    }[]
-  }[]
+  content: PortableTextBlock[]
   author: {
     _ref: string
     _type: 'reference'
