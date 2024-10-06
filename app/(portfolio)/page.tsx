@@ -10,7 +10,6 @@ import {
   getProjectsList,
 } from '@/sanity/sanity.query'
 import type { ArticleType, ProfileType, ProjectType } from '@/types'
-import { ArticlesSection } from '@/components/layout/articlesSection'
 import Image from 'next/image'
 import imageUrlBuilder from '@sanity/image-url'
 import client from '@/sanity/sanity.client'
@@ -69,7 +68,6 @@ export default async function Home() {
         <ProjectsSection projects={projects} />
         <LinksSection links={profile[0].socialLinks} />
       </div>
-      <ArticlesSection articles={articles} />
     </>
   )
 }
